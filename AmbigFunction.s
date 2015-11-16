@@ -6,8 +6,8 @@
 * function F from Java to m68000 Assembly. 		
 *												
 * Key Elements:									
-*		Multilevel recursion					
-*		Storing variables on system stack		
+*	Multilevel recursion					
+*	Storing variables on system stack		
 *													
 *	*denotes a comment							
 *	dn where n = 1 to 7 are data registers		
@@ -16,33 +16,33 @@
 *		a6 used as local helper address pointer 
 *		d0 designated as return data register  
 *												
-*	Additional references for m68000:	
-*	http://www.mathcs.emory.edu/~cheung/Courses
-*	   /255/Syllabus/7-M68000/M68000-instr.html 
+* Additional references for m68000:	
+*    http://www.mathcs.emory.edu/~cheung/Courses
+*       /255/Syllabus/7-M68000/M68000-instr.html 
 *												
 * * * * * * * * * * * * * * * * * * * * * * * * * 
-*	Java method to be translated:				 	
+* Java method to be translated:				 	
 *												
-*	int F(int i, int j, int k) {				
+* int F(int i, int j, int k) {				
 *												
-*		int s, t;								
+*	 int s, t;								
 *												
-* 		if ( i <= 0 || j <= 0 ){				
-* 			return(-1);							
-*		}										
+* 	 if ( i <= 0 || j <= 0 ){				
+* 		 return(-1);							
+*	 }										
 *												
-*     	else if ( i + j < k ){					
-*        	return (i+j);						
-*		}										
+*	 else if ( i + j < k ){					
+*        return (i+j);						
+*	 }										
 *												
-*     	else {									
-*        	s = 0;								
-*        	for (t = 1; t < k; t++){			
-*           	s = s + F(i-t, j-t, k-1) + 1;   
-*        	}									
-*        	return(s);							
-*		}		
-*	}											
+*    else {									
+*		 s = 0;								
+*        for (t = 1; t < k; t++){			
+*        	 s = s + F(i-t, j-t, k-1) + 1;   
+*        }									
+*        return(s);							
+*	 }		
+* }											
 * * * * * * * * * * * * * * * * * * * * * * * * *
 
 F:
@@ -79,7 +79,7 @@ Negative:
 
 *--------------------------------------------------------------------
 *	else if ( i + j < k ){					
-*   	return (i+j);						
+*   		return (i+j);						
 *	}					
 *--------------------------------------------------------------------
 ElseIf:	
