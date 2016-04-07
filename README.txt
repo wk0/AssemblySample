@@ -1,1 +1,3 @@
-A previous code sample
+#AssemblySample
+
+A code sample from past homework assignment.
